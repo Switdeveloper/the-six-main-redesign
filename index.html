@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Six AI Architects — Designing Intelligent Systems for Growth</title>
+  <meta name="description" content="We design custom AI automation systems that increase revenue, reduce costs, and streamline operations for enterprise teams." />
+  <meta name="author" content="The Six AI Architects" />
+  <meta property="og:title" content="The Six AI Architects" />
+  <meta property="og:description" content="Designing Intelligent Systems for Growth." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Floating Background Effects -->
+  <div class="bg-effects" aria-hidden="true">
+    <div class="grid-overlay"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="brand">
+        <img src="assets/logo.jpg" alt="The Six AI Architects" class="brand-logo" />
+      </a>
+      <nav class="nav-links">
+        <a href="#systems">Systems</a>
+        <a href="#results">Results</a>
+        <a href="#process">Process</a>
+        <a href="#why-us">Why Us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <button class="btn btn-ghost">Sign In</button>
+        <button class="btn btn-primary" data-scroll="#cta">Request Session</button>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#systems">Systems</a>
+      <a href="#results">Results</a>
+      <a href="#process">Process</a>
+      <a href="#why-us">Why Us</a>
+      <a href="contact.html">Contact</a>
+      <button class="btn btn-primary" data-scroll="#cta">Request Session</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-bg" style="background-image:url('assets/hero-bg.jpg')"></div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-content reveal">
+        <h1 class="hero-headline">
+          Designing Intelligent Systems for <span class="text-gradient">Growth</span>
+          <span class="hero-sub">built to increase revenue, reduce costs, and streamline operations.</span>
+        </h1>
+        <div class="hero-ctas">
+          <button class="btn btn-primary btn-xl" data-scroll="#cta">Request Architecture Session →</button>
+          <button class="btn btn-outline btn-xl" data-scroll="#systems">▶ View Systems We've Built</button>
+        </div>
+
+        <div class="dashboard-preview reveal">
+          <div class="dashboard-glow"></div>
+          <div class="dashboard">
+            <div class="dash-header">
+              <span class="dot d-red"></span><span class="dot d-yellow"></span><span class="dot d-green"></span>
+              <div class="dash-url"></div>
+            </div>
+            <div class="dash-body">
+              <div class="dash-stats">
+                <div class="dash-stat"><p class="ds-label">Revenue Impact</p><p class="ds-value">+$2.4M</p><span class="ds-trend">+35%</span></div>
+                <div class="dash-stat"><p class="ds-label">Cost Reduction</p><p class="ds-value">-$890K</p><span class="ds-trend">-40%</span></div>
+                <div class="dash-stat"><p class="ds-label">Time Saved</p><p class="ds-value">1,240h</p><span class="ds-trend">10×</span></div>
+                <div class="dash-stat"><p class="ds-label">Uptime</p><p class="ds-value">99.97%</p><span class="ds-trend">24/7</span></div>
+              </div>
+              <div class="dash-chart" id="dashChart"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Outcomes -->
+    <section class="section" id="results">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Measurable Impact</span>
+          <h2>Results That Define Success</h2>
+          <p>Our intelligent systems deliver quantifiable business transformation across revenue, efficiency, and operational excellence.</p>
+        </div>
+        <div class="outcomes-grid" id="outcomesGrid"></div>
+      </div>
+    </section>
+
+    <!-- Systems -->
+    <section class="section" id="systems">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">What We Build</span>
+          <h2>Six Systems. One Architecture.</h2>
+          <p>Each system is engineered to solve specific business challenges while integrating seamlessly into your existing infrastructure.</p>
+        </div>
+        <div class="systems-grid" id="systemsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Analytics -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Live Intelligence</span>
+          <h2>Real-Time Analytics Dashboard</h2>
+          <p>See how our systems provide actionable insights and measurable outcomes through intelligent data visualization.</p>
+        </div>
+        <div class="analytics-grid">
+          <div class="panel reveal">
+            <div class="panel-head"><h3>Lead Scoring Accuracy</h3><span class="badge badge-success">Live</span></div>
+            <div id="leadScoring" class="bar-list"></div>
+          </div>
+          <div class="panel reveal">
+            <div class="panel-head"><h3>Sales Cycle Reduction</h3><span class="badge badge-primary">73% faster</span></div>
+            <div class="cycle-chart">
+              <div class="cycle-col"><div class="cycle-bar before" data-h="100"></div><p>Before</p><span>45 days avg</span></div>
+              <div class="cycle-col"><div class="cycle-bar after" data-h="27"></div><p>After</p><span>12 days avg</span></div>
+            </div>
+          </div>
+          <div class="panel reveal">
+            <h3>Cost Savings Projection</h3>
+            <div class="cost-row">
+              <div><p class="ds-label">Current Savings</p><p class="cost-value primary">$890K</p></div>
+              <div style="text-align:right"><p class="ds-label">12-Month Projection</p><p class="cost-value">$1.2M</p></div>
+            </div>
+            <div class="progress-track"><div class="progress-fill" data-w="74"></div></div>
+            <p class="muted small">74% of annual target achieved</p>
+          </div>
+          <div class="panel reveal">
+            <h3>Fraud Risk Detection</h3>
+            <div class="risk-grid">
+              <div class="risk"><div class="risk-circle risk-low">76%</div><p>Low Risk</p></div>
+              <div class="risk"><div class="risk-circle risk-med">18%</div><p>Medium Risk</p></div>
+              <div class="risk"><div class="risk-circle risk-high">6%</div><p>High Risk</p></div>
+            </div>
+            <div class="success-banner">✓ 95% of fraud attempts blocked in real-time</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Workflows -->
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">How It Works</span>
+          <h2>Built AI Automation Workflows</h2>
+          <p>From input to outcome, every workflow is redesigned for maximum efficiency and cost savings.</p>
+          <p class="muted small">Select the workflows you'd like to automate, then book a free audit call with our architects to discuss your implementation.</p>
+        </div>
+        <div id="workflowsList" class="workflows-list"></div>
+        <div class="text-center mt-12">
+          <button class="link-btn" id="viewCartLink">View selected workflows & book audit call →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industries -->
+    <section class="section" id="industries">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Tailored Solutions</span>
+          <h2>Industries We <span class="text-gradient">Service</span></h2>
+          <p>We architect intelligent systems across diverse sectors, delivering measurable outcomes tailored to your industry's unique challenges.</p>
+        </div>
+        <div class="industries-grid" id="industriesGrid"></div>
+      </div>
+    </section>
+
+    <!-- AI Voice -->
+    <section class="section" id="ai-voice">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Service Spotlight</span>
+          <h2>Automate Your Business With <span class="text-gradient">AI Voice Solutions</span></h2>
+          <p>Transform your lead management with intelligent voice automation that works 24/7, qualifying and converting prospects while you focus on growth.</p>
+        </div>
+        <div class="voice-steps" id="voiceSteps"></div>
+        <div class="text-center mt-12">
+          <div class="pill-info">Results: 60% faster lead response • 40% higher conversion • 24/7 availability</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Insurance Verification -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="pill-info" style="margin-bottom:1.5rem">🛡 Healthcare Solutions</div>
+          <h2>Insurance Verification<br><span class="text-primary">That Works in Minutes</span></h2>
+          <p>Spend less time tracking down insurance providers and spend more time building relationships with your patients.</p>
+        </div>
+        <div class="insurance-grid">
+          <div class="reveal">
+            <h3 class="ins-title">Check Insurance in Advance</h3>
+            <p class="muted">Automatically check patient insurance status ahead of their appointments, so you get more actionable data to help your staff be more efficient.</p>
+            <h3 class="ins-title" style="margin-top:2rem">Dynamic Eligibility Reports</h3>
+            <p class="muted">Review eligibility reports and get every detail of your patients' insurance benefits, including:</p>
+            <ul class="check-list">
+              <li>✓ Procedure/claim history</li>
+              <li>✓ Deductibles & maximums</li>
+              <li>✓ Coverage limitations</li>
+              <li>✓ Co-insurance details</li>
+            </ul>
+            <button class="btn btn-primary" style="margin-top:1.5rem">Get a Demo</button>
+          </div>
+          <div class="reveal ins-cards">
+            <div class="ins-card">
+              <h4>Verify Insurance</h4>
+              <div class="success-banner" style="margin-bottom:1rem">✓ Verification Successful</div>
+              <div class="ins-stats">
+                <div><div class="ins-stat-val" data-counter="1201">0</div><div class="ds-label">January Verifications</div></div>
+                <div><div class="ins-stat-val primary" data-counter="180">0</div><div class="ds-label">Hours Saved</div></div>
+              </div>
+              <button class="btn btn-primary" style="width:100%;margin-top:1rem">Writeback</button>
+            </div>
+            <div class="ins-side">
+              <div class="ins-card center">
+                <div class="ring"><svg width="120" height="120"><circle cx="60" cy="60" r="52" stroke="hsl(var(--muted))" stroke-width="8" fill="none" opacity=".3"/><circle id="ringFill" cx="60" cy="60" r="52" stroke="hsl(var(--primary))" stroke-width="8" fill="none" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="326.7" transform="rotate(-90 60 60)"/></svg><div class="ring-text"><strong data-counter="1247">0</strong><span>Total Verifications</span></div></div>
+              </div>
+              <div class="ins-card center protected"><div class="prot-icon">🛡</div><span>Protected</span></div>
+            </div>
+            <div class="ins-card">
+              <h4>Insurance Eligibility Report</h4>
+              <div class="patient-row">
+                <div class="avatar">👤</div>
+                <div class="patient-info"><div class="patient-name">Sarah Mitchell <span class="badge badge-primary">✓ Active</span></div><div class="ds-label">Patient Details</div></div>
+              </div>
+              <div class="plan-grid">
+                <div><div class="ds-label">Group Number</div><strong>12345</strong></div>
+                <div><div class="ds-label">Provider</div><strong>BlueCross</strong></div>
+                <div><div class="ds-label">Member ID</div><strong>1234567</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <blockquote class="testimonial reveal">
+          <span class="quote-mark">"</span>I have been an insurance coordinator before and the difference between the past and having <strong>automated verification</strong> is dramatic. It helps me out so much. It saves us <strong>25 minutes</strong> 🕒 per patient—easily.<span class="quote-mark">"</span>
+          <footer><strong>Healthcare Administrator</strong> · Medical Practice</footer>
+        </blockquote>
+        <div class="bottom-stats">
+          <div class="stat-card"><div class="stat-val" data-counter="98" data-suffix="%">0</div><div class="ds-label">Accuracy Rate</div></div>
+          <div class="stat-card"><div class="stat-val" data-counter="25" data-suffix="min">0</div><div class="ds-label">Saved Per Patient</div></div>
+          <div class="stat-card"><div class="stat-val" data-counter="5000" data-suffix="+">0</div><div class="ds-label">Daily Verifications</div></div>
+          <div class="stat-card"><div class="stat-val" data-counter="500" data-suffix="+">0</div><div class="ds-label">Healthcare Partners</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class="section" id="why-us">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Why Choose Us</span>
+          <h2>The Architect Difference</h2>
+          <p>We're not another AI vendor. We're strategic partners who engineer transformational business infrastructure.</p>
+        </div>
+        <div class="pillars-grid" id="pillarsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Team Collaboration -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Human + AI Synergy</span>
+          <h2>The Perfect Partnership</h2>
+          <p>We combine the precision of AI with the creativity and strategic thinking of human experts to deliver exceptional results.</p>
+        </div>
+        <div class="team-stage reveal">
+          <div class="team-row" id="teamRow"></div>
+          <div class="team-center">🤝</div>
+          <div class="team-features">
+            <div class="feature-card"><div class="feature-icon">🤖</div><h3>AI Agents</h3><p>Smart automation that works 24/7</p></div>
+            <div class="feature-card"><div class="feature-icon">👥</div><h3>Human Experts</h3><p>Strategic oversight and creativity</p></div>
+            <div class="feature-card"><div class="feature-icon">🤝</div><h3>Seamless Teamwork</h3><p>Perfect harmony between tech and talent</p></div>
+          </div>
+        </div>
+        <div class="team-stats">
+          <div class="t-stat"><div class="t-val text-gradient">50+</div><p>AI Agents Deployed</p></div>
+          <div class="t-stat"><div class="t-val text-gradient">200+</div><p>Human Experts</p></div>
+          <div class="t-stat"><div class="t-val text-gradient">99.9%</div><p>Uptime Guarantee</p></div>
+          <div class="t-stat"><div class="t-val text-gradient">24/7</div><p>Support Coverage</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Got Questions?</span>
+          <h2>The Six AI Architects FAQ</h2>
+          <p>Everything you need to know about our AI automation services and how we can help transform your business.</p>
+        </div>
+        <div class="faq-list" id="faqList"></div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section" id="cta">
+      <div class="container reveal text-center">
+        <div class="pill-info" style="margin-bottom:2rem">📅 Limited Strategy Sessions Available</div>
+        <h2 class="big-headline">Ready to Transform <span class="text-gradient">Your Business?</span></h2>
+        <p class="lead">Partner with architects who design intelligent systems for growth, efficiency, and resilience. Your transformation begins with a conversation.</p>
+        <div class="hero-ctas" style="justify-content:center">
+          <button class="btn btn-primary btn-xl">Book Strategy Call →</button>
+          <button class="btn btn-outline btn-xl">View Case Studies</button>
+        </div>
+        <div class="trust">
+          <p class="muted small">Trusted by innovative teams at</p>
+          <div class="trust-logos"><span>Enterprise Co</span><span>Growth Inc</span><span>Scale Labs</span><span>Future Tech</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo.jpg" alt="The Six AI" class="footer-logo" style="border-radius:50%" />
+        <p class="muted">We redesign business structures using intelligent systems to drive revenue growth, operational efficiency, and sustainable transformation.</p>
+        <div class="socials"><a href="#">LinkedIn</a><a href="#">Twitter</a><a href="#">GitHub</a></div>
+      </div>
+      <div><h4>Systems</h4><ul><li><a href="#">Revenue Intelligence</a></li><li><a href="#">Sales Automation</a></li><li><a href="#">Marketing Systems</a></li><li><a href="#">Customer Experience</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="#">About Us</a></li><li><a href="#">Case Studies</a></li><li><a href="#">Careers</a></li><li><a href="#">Contact</a></li></ul></div>
+      <div><h4>Resources</h4><ul><li><a href="#">Documentation</a></li><li><a href="#">Blog</a></li><li><a href="#">Webinars</a></li><li><a href="#">ROI Calculator</a></li></ul></div>
+    </div>
+    <div class="container footer-bottom">
+      <p class="muted small">© <span id="year"></span> The Six AI Architects. All rights reserved.</p>
+      <div><a href="#" class="muted">Privacy Policy</a> · <a href="#" class="muted">Terms of Service</a></div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+
+  <!-- Chat widget -->
+  <button class="chat-fab" id="chatFab" aria-label="Open chat">💬</button>
+  <div class="chat-window" id="chatWindow">
+    <div class="chat-header">
+      <div><strong>The Six AI Architects</strong><div class="ds-label">Usually replies instantly</div></div>
+      <button id="chatClose" aria-label="Close">✕</button>
+    </div>
+    <div class="chat-messages" id="chatMessages"></div>
+    <form class="chat-input" id="chatForm">
+      <input type="text" id="chatInput" placeholder="Type your message..." />
+      <button type="submit">→</button>
+    </form>
+  </div>
+
+  <!-- Workflow Cart Drawer -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Workflow cart">
+    <div class="cart-header">
+      <h3>Your Workflow Cart</h3>
+      <button id="cartClose" aria-label="Close">✕</button>
+    </div>
+    <div class="cart-body" id="cartBody"></div>
+    <div class="cart-footer">
+      <p class="muted small">Ready to discuss implementation? Book a free audit call with our architects.</p>
+      <button class="btn btn-primary" style="width:100%">Book Audit Call →</button>
+    </div>
+  </aside>
+
+  <!-- Floating cart button -->
+  <button class="cart-fab" id="cartFab" aria-label="Open cart">
+    🛒 <span id="cartCount" class="cart-count">0</span>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
